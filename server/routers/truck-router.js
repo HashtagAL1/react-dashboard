@@ -66,18 +66,16 @@ router.post('/addMeasurement', (req, res) => {
     });
 });
 
-router.get('/getMeasurements/:truckPlate/:from/:to', (req, res) => {
-    const truckPlate = req.params.truckPlate
-    const from = req.params.from;
-    const to = req.params.to;
+router.get('/getMeasurements', (req, res) => {
+    // const truckId = req.params.truckId
+    // const from = req.params.from;
+    // const to = req.params.to;
 
-    TruckMeasurement.find({ plate: truckPlate }).then((measurements) => {
-        let result = [];
-        result = measurements.filter(m => m.timestamp >= from && m.timestamp <= to);
+    TruckMeasurement.find({}).then((measurements) => {
         return res.status(200).json({
             success: true,
             msg: 'Measurements fetched',
-            measurements: result
+            measurements: measurements
         });
     });
 });

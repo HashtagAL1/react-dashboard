@@ -16,14 +16,46 @@ code {
   border: 1px solid red;
 }
 
+.text-sm {
+  font-size: 0.8em;
+}
+
+.text-xs {
+  font-size: 0.6em;
+}
+
+.text-xxs {
+  font-size: 0.4em;
+}
+
+.half-side {
+  display: inline-block !important;
+  width: 50% !important;
+}
+
+@media screen and (max-width: 1125px) {
+  .half-side {
+    display: block !important;
+    width: 100% !important;
+  }
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.pointer-hover:hover {
+  cursor: pointer;
+}
+
 .sidebar-container {
-  width: 25%;
+  width: 15%;
   height: 100%;
   background-color: #343a40;
 }
 
 .map-container {
-  width: 75%;
+  width: 85%;
   height: 100%;
 }
 
