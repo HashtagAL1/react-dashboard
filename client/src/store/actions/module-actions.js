@@ -1,4 +1,4 @@
-import { getModules } from '../../services/modules-service';
+import { getModules, getDashboardInfo } from '../../services/modules-service';
 
 export const fetchModules = () => {
     return (dispatch, getState) => {
@@ -26,4 +26,14 @@ export const filterModules = (criteria) => {
         }
         dispatch({ type: `FILTER_MODULES`, payload: modules })
     }
-}
+};
+
+export const fetchDashboardInfo = () => {
+    console.log('in action');
+    return (dispatch, getState) => {
+        getDashboardInfo().then((res) => {
+            console.log(res);
+            dispatch({ type: 'GET_DASHBOARD_DATA_SUCCESS', payload: res.data.result });
+        });
+    };
+};

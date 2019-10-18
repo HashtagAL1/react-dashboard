@@ -76,3 +76,142 @@ code {
 .sidebar-btn:hover {
   background-color: #50bae0;
 }
+
+
+
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  #sidebar {
+      margin-left: -250px;
+  }
+  #sidebar.active {
+      margin-left: 0;
+  }
+}
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #232227;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #232227;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #232227;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+#sidebar ul li a:hover {
+  color: black;
+  background: #6668de;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background: #616268;
+}
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #616268;
+}
+
+.custom-bg-dark {
+  background-color: #202421 !important;
+}
+
+.testBorder {
+  border: 1px solid red !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.h-20 {
+  height: 15vh !important;
+}
+
+.h-45 {
+  height: 45vh !important;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: visible;
+}
+
+.dashboard-general-stats {
+  float: left;
+  width: 23%;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.custom-bg-primary {
+  background-color: #6668de;
+  opacity: 1.0;
+}
+
+.o-x-hidden {
+  overflow-x: hidden;
+}

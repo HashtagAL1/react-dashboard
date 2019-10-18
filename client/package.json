@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "d3": "^5.12.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jquery": "^3.4.1",
     "leaflet": "^1.5.1",
     "leaflet-drift-marker": "^1.0.3",
     "leaflet-moving-marker": "^0.3.0",
@@ -15,12 +19,14 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "redux": "^4.0.4",
+    "redux-mock-store": "^1.5.3",
+    "redux-mock-store-jest": "0.0.2",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

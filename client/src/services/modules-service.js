@@ -16,6 +16,10 @@ export const getModuleIcon = (value) => {
     }
 }
 
+export const getDashboardInfo = () => {
+    return axios.get('http://localhost:5555/other/dashboardData');
+}
+
 export const getGreenModuleIcon = () => {
     return `/green-bin.png`;
 }
